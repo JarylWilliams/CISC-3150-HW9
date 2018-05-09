@@ -1,0 +1,6 @@
+The reason why the program died without throwing any exceptions because the NotifyAll method was throwing an unchecked exception. 
+NotifyAll wakes up the threads but it doesn’t unlock them. The threads are in a lock but never gets unlocked.
+The solution to this problem will be to use the synchronized keyword for the consumer and producer methods. 
+
+Source:
+Professor Bukhari in class on 05/08/2018. 
